@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Redirecting...</title>
@@ -8,18 +8,39 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
   <style>
-	p {
-	    font-family: "Krona One", sans-serif;
-            font-style: normal;
-            font-size: 13px;
-            letter-spacing: -0.7px;
-            color: #383838;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-		}
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: white;
+    }
+
+    p {
+      font-family: "Krona One", sans-serif;
+      font-style: normal;
+      font-size: 13px;
+      letter-spacing: -0.7px;
+      color: #383838;
+      text-align: center;
+    }
+
+    .dot::after {
+      content: "";
+      animation: dots 1.2s steps(4, end) infinite;
+    }
+
+    @keyframes dots {
+      0%   { content: ""; }
+      25%  { content: "."; }
+      50%  { content: ".."; }
+      75%  { content: "..."; }
+      100% { content: ""; }
+    }
+  </style>
 </head>
 <body>
-  <p>Redirecting to KRW payment page. . .</p>
+  <p>Redirecting to KRW payment page<span class="dot"></span></p>
 </body>
 </html>
